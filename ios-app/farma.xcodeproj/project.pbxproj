@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		FA9ED0502CF4B597003D13C2 /* BuyerRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED04F2CF4B597003D13C2 /* BuyerRegistrationView.swift */; };
+		FA9ED0522CF4E689003D13C2 /* FarmerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0512CF4E689003D13C2 /* FarmerTabView.swift */; };
+		FA9ED0542CF4E701003D13C2 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0532CF4E701003D13C2 /* AddProductView.swift */; };
+		FA9ED0562CF4E73D003D13C2 /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0552CF4E73D003D13C2 /* ImagePicker.swift */; };
+		FA9ED0582CF4EDA7003D13C2 /* ProfileManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0572CF4EDA7003D13C2 /* ProfileManagementView.swift */; };
+		FA9ED05A2CF4F0F1003D13C2 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */; };
+		FA9ED05C2CF4F13D003D13C2 /* ProductFarmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */; };
+		FA9ED05E2CF4F180003D13C2 /* ProductFarmerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */; };
+		FAC332A82CEDD3340025E24E /* farmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332A72CEDD3340025E24E /* farmaApp.swift */; };
+		FAC332AA2CEDD3340025E24E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332A92CEDD3340025E24E /* ContentView.swift */; };
+		FAC332AC2CEDD33F0025E24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC332AB2CEDD33F0025E24E /* Assets.xcassets */; };
+		FAC332AF2CEDD33F0025E24E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC332AE2CEDD33F0025E24E /* Preview Assets.xcassets */; };
+		FAC332B92CEDD3400025E24E /* farmaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332B82CEDD3400025E24E /* farmaTests.swift */; };
+		FAC332C32CEDD3400025E24E /* farmaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332C22CEDD3400025E24E /* farmaUITests.swift */; };
+		FAC332C52CEDD3400025E24E /* farmaUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332C42CEDD3400025E24E /* farmaUITestsLaunchTests.swift */; };
+		FAC332D22CEDD4B30025E24E /* BuyerHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332D12CEDD4B30025E24E /* BuyerHomeView.swift */; };
+		FAC332D62CEE1C1A0025E24E /* CategoryProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332D52CEE1C1A0025E24E /* CategoryProductsView.swift */; };
+		FAC332D82CEE2F8C0025E24E /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332D72CEE2F8C0025E24E /* ProductDetailView.swift */; };
+		FAC332DA2CEE31300025E24E /* ProductSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332D92CEE31300025E24E /* ProductSearchView.swift */; };
+		FAC332DC2CEE3C170025E24E /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332DB2CEE3C170025E24E /* MainTabView.swift */; };
+		FAC332EC2CEE71340025E24E /* CartItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332EB2CEE71340025E24E /* CartItem.swift */; };
+		FAC332EE2CEE737F0025E24E /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332ED2CEE737F0025E24E /* CartView.swift */; };
+		FAFC9FEE2CF0C9F3007613D3 /* RegisterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC9FED2CF0C9F3007613D3 /* RegisterView.swift */; };
+		FAFC9FF02CF0CA9E007613D3 /* SplashScreenView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC9FEF2CF0CA9E007613D3 /* SplashScreenView.swift */; };
+		FAFC9FF22CF23388007613D3 /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC9FF12CF23388007613D3 /* ButtonStyle.swift */; };
+		FAFC9FF42CF24096007613D3 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC9FF32CF24096007613D3 /* LoginView.swift */; };
+		FAFC9FF62CF246F3007613D3 /* FarmerRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAFC9FF52CF246F3007613D3 /* FarmerRegistrationView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		FAC332B52CEDD33F0025E24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC3329C2CEDD3340025E24E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC332A32CEDD3340025E24E;
+			remoteInfo = farma;
+		};
+		FAC332BF2CEDD3400025E24E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FAC3329C2CEDD3340025E24E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FAC332A32CEDD3340025E24E;
+			remoteInfo = farma;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		FA9ED04F2CF4B597003D13C2 /* BuyerRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerRegistrationView.swift; sourceTree = "<group>"; };
+		FA9ED0512CF4E689003D13C2 /* FarmerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerTabView.swift; sourceTree = "<group>"; };
+		FA9ED0532CF4E701003D13C2 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
+		FA9ED0552CF4E73D003D13C2 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		FA9ED0572CF4EDA7003D13C2 /* ProfileManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileManagementView.swift; sourceTree = "<group>"; };
+		FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
+		FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFarmerView.swift; sourceTree = "<group>"; };
+		FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFarmerDetailView.swift; sourceTree = "<group>"; };
+		FAC332A42CEDD3340025E24E /* farma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farma.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC332A72CEDD3340025E24E /* farmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmaApp.swift; sourceTree = "<group>"; };
+		FAC332A92CEDD3340025E24E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		FAC332AB2CEDD33F0025E24E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		FAC332AE2CEDD33F0025E24E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		FAC332B42CEDD33F0025E24E /* farmaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = farmaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC332B82CEDD3400025E24E /* farmaTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmaTests.swift; sourceTree = "<group>"; };
+		FAC332BE2CEDD3400025E24E /* farmaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = farmaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FAC332C22CEDD3400025E24E /* farmaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmaUITests.swift; sourceTree = "<group>"; };
+		FAC332C42CEDD3400025E24E /* farmaUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmaUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FAC332D12CEDD4B30025E24E /* BuyerHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerHomeView.swift; sourceTree = "<group>"; };
+		FAC332D52CEE1C1A0025E24E /* CategoryProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryProductsView.swift; sourceTree = "<group>"; };
+		FAC332D72CEE2F8C0025E24E /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		FAC332D92CEE31300025E24E /* ProductSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductSearchView.swift; sourceTree = "<group>"; };
+		FAC332DB2CEE3C170025E24E /* MainTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
+		FAC332EB2CEE71340025E24E /* CartItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartItem.swift; sourceTree = "<group>"; };
+		FAC332ED2CEE737F0025E24E /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		FAFC9FED2CF0C9F3007613D3 /* RegisterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterView.swift; sourceTree = "<group>"; };
+		FAFC9FEF2CF0CA9E007613D3 /* SplashScreenView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashScreenView.swift; sourceTree = "<group>"; };
+		FAFC9FF12CF23388007613D3 /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		FAFC9FF32CF24096007613D3 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		FAFC9FF52CF246F3007613D3 /* FarmerRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerRegistrationView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FAC332A12CEDD3340025E24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332B12CEDD33F0025E24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332BB2CEDD3400025E24E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		FAC3329B2CEDD3340025E24E = {
+			isa = PBXGroup;
+			children = (
+				FAC332A62CEDD3340025E24E /* farma */,
+				FAC332B72CEDD33F0025E24E /* farmaTests */,
+				FAC332C12CEDD3400025E24E /* farmaUITests */,
+				FAC332A52CEDD3340025E24E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		FAC332A52CEDD3340025E24E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FAC332A42CEDD3340025E24E /* farma.app */,
+				FAC332B42CEDD33F0025E24E /* farmaTests.xctest */,
+				FAC332BE2CEDD3400025E24E /* farmaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FAC332A62CEDD3340025E24E /* farma */ = {
+			isa = PBXGroup;
+			children = (
+				FAC332A72CEDD3340025E24E /* farmaApp.swift */,
+				FAC332A92CEDD3340025E24E /* ContentView.swift */,
+				FAC332AB2CEDD33F0025E24E /* Assets.xcassets */,
+				FAC332AD2CEDD33F0025E24E /* Preview Content */,
+				FAC332D12CEDD4B30025E24E /* BuyerHomeView.swift */,
+				FAC332D52CEE1C1A0025E24E /* CategoryProductsView.swift */,
+				FAC332D72CEE2F8C0025E24E /* ProductDetailView.swift */,
+				FAC332D92CEE31300025E24E /* ProductSearchView.swift */,
+				FAC332DB2CEE3C170025E24E /* MainTabView.swift */,
+				FAC332EB2CEE71340025E24E /* CartItem.swift */,
+				FAC332ED2CEE737F0025E24E /* CartView.swift */,
+				FAFC9FED2CF0C9F3007613D3 /* RegisterView.swift */,
+				FAFC9FEF2CF0CA9E007613D3 /* SplashScreenView.swift */,
+				FAFC9FF12CF23388007613D3 /* ButtonStyle.swift */,
+				FAFC9FF32CF24096007613D3 /* LoginView.swift */,
+				FAFC9FF52CF246F3007613D3 /* FarmerRegistrationView.swift */,
+				FA9ED04F2CF4B597003D13C2 /* BuyerRegistrationView.swift */,
+				FA9ED0512CF4E689003D13C2 /* FarmerTabView.swift */,
+				FA9ED0532CF4E701003D13C2 /* AddProductView.swift */,
+				FA9ED0552CF4E73D003D13C2 /* ImagePicker.swift */,
+				FA9ED0572CF4EDA7003D13C2 /* ProfileManagementView.swift */,
+				FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */,
+				FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */,
+				FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */,
+			);
+			path = farma;
+			sourceTree = "<group>";
+		};
+		FAC332AD2CEDD33F0025E24E /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				FAC332AE2CEDD33F0025E24E /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		FAC332B72CEDD33F0025E24E /* farmaTests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC332B82CEDD3400025E24E /* farmaTests.swift */,
+			);
+			path = farmaTests;
+			sourceTree = "<group>";
+		};
+		FAC332C12CEDD3400025E24E /* farmaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				FAC332C22CEDD3400025E24E /* farmaUITests.swift */,
+				FAC332C42CEDD3400025E24E /* farmaUITestsLaunchTests.swift */,
+			);
+			path = farmaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FAC332A32CEDD3340025E24E /* farma */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC332C82CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farma" */;
+			buildPhases = (
+				FAC332A02CEDD3340025E24E /* Sources */,
+				FAC332A12CEDD3340025E24E /* Frameworks */,
+				FAC332A22CEDD3340025E24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = farma;
+			productName = farma;
+			productReference = FAC332A42CEDD3340025E24E /* farma.app */;
+			productType = "com.apple.product-type.application";
+		};
+		FAC332B32CEDD33F0025E24E /* farmaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC332CB2CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farmaTests" */;
+			buildPhases = (
+				FAC332B02CEDD33F0025E24E /* Sources */,
+				FAC332B12CEDD33F0025E24E /* Frameworks */,
+				FAC332B22CEDD33F0025E24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC332B62CEDD33F0025E24E /* PBXTargetDependency */,
+			);
+			name = farmaTests;
+			productName = farmaTests;
+			productReference = FAC332B42CEDD33F0025E24E /* farmaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		FAC332BD2CEDD3400025E24E /* farmaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FAC332CE2CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farmaUITests" */;
+			buildPhases = (
+				FAC332BA2CEDD3400025E24E /* Sources */,
+				FAC332BB2CEDD3400025E24E /* Frameworks */,
+				FAC332BC2CEDD3400025E24E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FAC332C02CEDD3400025E24E /* PBXTargetDependency */,
+			);
+			name = farmaUITests;
+			productName = farmaUITests;
+			productReference = FAC332BE2CEDD3400025E24E /* farmaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FAC3329C2CEDD3340025E24E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1400;
+				LastUpgradeCheck = 1400;
+				TargetAttributes = {
+					FAC332A32CEDD3340025E24E = {
+						CreatedOnToolsVersion = 14.0.1;
+					};
+					FAC332B32CEDD33F0025E24E = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = FAC332A32CEDD3340025E24E;
+					};
+					FAC332BD2CEDD3400025E24E = {
+						CreatedOnToolsVersion = 14.0.1;
+						TestTargetID = FAC332A32CEDD3340025E24E;
+					};
+				};
+			};
+			buildConfigurationList = FAC3329F2CEDD3340025E24E /* Build configuration list for PBXProject "farma" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FAC3329B2CEDD3340025E24E;
+			productRefGroup = FAC332A52CEDD3340025E24E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FAC332A32CEDD3340025E24E /* farma */,
+				FAC332B32CEDD33F0025E24E /* farmaTests */,
+				FAC332BD2CEDD3400025E24E /* farmaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FAC332A22CEDD3340025E24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC332AF2CEDD33F0025E24E /* Preview Assets.xcassets in Resources */,
+				FAC332AC2CEDD33F0025E24E /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332B22CEDD33F0025E24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332BC2CEDD3400025E24E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FAC332A02CEDD3340025E24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC332EE2CEE737F0025E24E /* CartView.swift in Sources */,
+				FAFC9FEE2CF0C9F3007613D3 /* RegisterView.swift in Sources */,
+				FAC332D22CEDD4B30025E24E /* BuyerHomeView.swift in Sources */,
+				FA9ED0562CF4E73D003D13C2 /* ImagePicker.swift in Sources */,
+				FA9ED0542CF4E701003D13C2 /* AddProductView.swift in Sources */,
+				FAC332D82CEE2F8C0025E24E /* ProductDetailView.swift in Sources */,
+				FA9ED0582CF4EDA7003D13C2 /* ProfileManagementView.swift in Sources */,
+				FAFC9FF02CF0CA9E007613D3 /* SplashScreenView.swift in Sources */,
+				FA9ED05E2CF4F180003D13C2 /* ProductFarmerDetailView.swift in Sources */,
+				FA9ED05C2CF4F13D003D13C2 /* ProductFarmerView.swift in Sources */,
+				FAC332EC2CEE71340025E24E /* CartItem.swift in Sources */,
+				FAC332AA2CEDD3340025E24E /* ContentView.swift in Sources */,
+				FAC332D62CEE1C1A0025E24E /* CategoryProductsView.swift in Sources */,
+				FA9ED05A2CF4F0F1003D13C2 /* InventoryView.swift in Sources */,
+				FAC332DC2CEE3C170025E24E /* MainTabView.swift in Sources */,
+				FAFC9FF22CF23388007613D3 /* ButtonStyle.swift in Sources */,
+				FA9ED0502CF4B597003D13C2 /* BuyerRegistrationView.swift in Sources */,
+				FAFC9FF62CF246F3007613D3 /* FarmerRegistrationView.swift in Sources */,
+				FAFC9FF42CF24096007613D3 /* LoginView.swift in Sources */,
+				FA9ED0522CF4E689003D13C2 /* FarmerTabView.swift in Sources */,
+				FAC332DA2CEE31300025E24E /* ProductSearchView.swift in Sources */,
+				FAC332A82CEDD3340025E24E /* farmaApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332B02CEDD33F0025E24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC332B92CEDD3400025E24E /* farmaTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FAC332BA2CEDD3400025E24E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FAC332C52CEDD3400025E24E /* farmaUITestsLaunchTests.swift in Sources */,
+				FAC332C32CEDD3400025E24E /* farmaUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FAC332B62CEDD33F0025E24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC332A32CEDD3340025E24E /* farma */;
+			targetProxy = FAC332B52CEDD33F0025E24E /* PBXContainerItemProxy */;
+		};
+		FAC332C02CEDD3400025E24E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FAC332A32CEDD3340025E24E /* farma */;
+			targetProxy = FAC332BF2CEDD3400025E24E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		FAC332C62CEDD3400025E24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FAC332C72CEDD3400025E24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FAC332C92CEDD3400025E24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"farma/Preview Content\"";
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		FAC332CA2CEDD3400025E24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"farma/Preview Content\"";
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farma;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		FAC332CC2CEDD3400025E24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/farma";
+			};
+			name = Debug;
+		};
+		FAC332CD2CEDD3400025E24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farmaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/farma.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/farma";
+			};
+			name = Release;
+		};
+		FAC332CF2CEDD3400025E24E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = farma;
+			};
+			name = Debug;
+		};
+		FAC332D02CEDD3400025E24E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4WN3D5GC24;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = asa.farmaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = farma;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FAC3329F2CEDD3340025E24E /* Build configuration list for PBXProject "farma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC332C62CEDD3400025E24E /* Debug */,
+				FAC332C72CEDD3400025E24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC332C82CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farma" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC332C92CEDD3400025E24E /* Debug */,
+				FAC332CA2CEDD3400025E24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC332CB2CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farmaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC332CC2CEDD3400025E24E /* Debug */,
+				FAC332CD2CEDD3400025E24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FAC332CE2CEDD3400025E24E /* Build configuration list for PBXNativeTarget "farmaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FAC332CF2CEDD3400025E24E /* Debug */,
+				FAC332D02CEDD3400025E24E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FAC3329C2CEDD3340025E24E /* Project object */;
+}
