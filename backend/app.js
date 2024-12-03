@@ -26,6 +26,10 @@ const ordersRouter = require('./routers/orders');
 const paymentRouter = require('./routers/payment');
 const loginRouter = require('./routers/login');
 const pendingRouter = require('./routers/pending');
+const offersRouter = require('./routers/offers');
+const chatRouter = require('./routers/chat');
+const salesReportRouter = require('./routers/salesRep');
+
 
 
 
@@ -55,6 +59,10 @@ app.use(`${api}/orders`, ordersRouter);
 app.use(`${api}/payment`, paymentRouter);
 app.use(`${api}/login`, loginRouter);
 app.use(`${api}/pending`, pendingRouter);
+app.use(`${api}/offers`, offersRouter);
+app.use(`${api}/chat`, chatRouter);
+app.use(`${api}/reports/sales`, salesReportRouter);
+
 
 
 app.listen(3000, ()=>{

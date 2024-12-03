@@ -23,7 +23,7 @@ class CartManager: ObservableObject {
     }
 
     func totalPrice() -> Int {
-        return items.reduce(0) { $0 + ($1.quantity * $1.product.price / $1.product.quantity) }
+        return items.reduce(0) { $0 + ($1.quantity * $1.product.price) }
     }
     
     func clearCart() {

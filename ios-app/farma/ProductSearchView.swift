@@ -171,9 +171,9 @@ struct ProductSearchView: View {
         // Sort the filtered products based on the selected price order
         switch selectedSortOrder {
         case "Price: Low to High":
-            filteredProducts.sort { $0.price/$0.quantity < $1.price/$1.quantity }
+            filteredProducts.sort { $0.price < $1.price }
         case "Price: High to Low":
-            filteredProducts.sort { $0.price/$0.quantity > $1.price/$1.quantity }
+            filteredProducts.sort { $0.price > $1.price }
         default:
             break
         }

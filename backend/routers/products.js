@@ -32,11 +32,15 @@ router.get('/', async (req, res) => {
     const category = req.query.category;
 
     try {
-        let query = 'SELECT * FROM product';
+        let query = `
+        SELECT p.productId, p.farmId, p.name, p.quantity, p.description, p.category, p.organic_certification, p.price, p.image_url, f.name AS farm_name
+        FROM Product p
+        INNER JOIN farm f ON p.farmid = f.farmid
+        `;
         const params = [];
 
         if (category) {
-            query += ' WHERE category = $1';
+            query += ' WHERE p.category = $1';
             params.push(category);
         }
 
@@ -48,7 +52,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('far/', async (req, res) => {
+router.get('/far', async (req, res) => {
     const farmer_id = req.query.farmer_id; // Read farmer_id from query params
 
     try {
@@ -68,18 +72,52 @@ router.get('far/', async (req, res) => {
     }
 });
 
+router.get('/fari/', async (req, res) => {
+    const farmer_id = req.query.farmer_id; // Read farmer_id from query params
 
+    try {
+        let result;
+        if (farmer_id) {
+            // Fetch products for the specific farmer
+            result = await client.query('SELECT * FROM product WHERE farmid = $1', [farmer_id]);
+        } else {
+            // Fetch all products if no farmer_id is provided
+            result = await client.query('SELECT * FROM product');
+        }
+
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching products:', err);
+        res.status(500).send('Error fetching products');
+    }
+});
+
+router.get('/low-stock', async (req, res) => {
+    const farmId = req.query.farmId;
+
+    try {
+        const result = await client.query(
+            'SELECT * FROM product WHERE farmid = $1 AND quantity < 5',
+            [farmId]
+        );
+        res.json(result.rows);
+    } catch (err) {
+        console.error('Error fetching low-stock products:', err);
+        res.status(500).json({ error: 'Internal Server Error' });
+    }
+});
 
 router.get('/random-products', async (req, res) => {
     try {
         const result = await client.query(`
-            SELECT productId, farmId, name, quantity, description, category, organic_certification, price, image_url 
-            FROM Product
+            SELECT p.productId, p.farmId, p.name, p.quantity, p.description, p.category, p.organic_certification, p.price, p.image_url, f.name AS farm_name
+            FROM Product p
+            INNER JOIN farm f ON p.farmid = f.farmid
             ORDER BY RANDOM()
             LIMIT 7
         `);
         res.json(result.rows);
-        console.log(result.rows);
+        console.log(result.rows)
 
     } catch (err) {
         console.error(err);
@@ -103,7 +141,10 @@ router.get('/categories', async (req, res) => {
 router.get('/:id', async (req, res) => {
     const id = req.params.id;
     try {
-        const result = await client.query('SELECT * FROM product WHERE productid = $1', [id]);
+        const result = await client.query(`
+            SELECT p.productId, p.farmId, p.name, p.quantity, p.description, p.category, p.organic_certification, p.price, p.image_url, f.name AS farm_name
+            FROM Product p
+            INNER JOIN farm f ON p.farmid = f.farmid WHERE p.productid = $1`, [id]);
         if (result.rowCount === 0) {
             res.status(404).send("Product not found");
         } else {

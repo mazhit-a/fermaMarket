@@ -15,6 +15,28 @@ client.connect()
     .then(() => console.log('Connected to PostgreSQL'))
     .catch(err => console.error('Connection error', err.stack));
 
+    router.get('/farms/:farmerId', async (req, res) => {
+        const farmerId = req.params.farmerId;
+        console.log('Received farmerId:', farmerId); // Log incoming farmerId
+    
+        try {
+            const result = await client.query(
+                'SELECT farmid FROM farm WHERE farmerid = $1',
+                [farmerId]
+            );
+            console.log('Query Result:', result.rows); // Log query result
+    
+            if (result.rows.length === 0) {
+                return res.status(404).json({ error: 'Farm not found for the farmer' });
+            }
+    
+            res.json({ farmId: result.rows[0].farmid });
+        } catch (err) {
+            console.error('Error fetching farmId:', err);
+            res.status(500).json({ error: 'Error fetching farmId' });
+        }
+    });
+    
     router.get('/', async (req, res) => {
         try {
             const result = await client.query('SELECT * FROM farmer');
@@ -34,7 +56,7 @@ client.connect()
                 [userId]
             );
             const farmResult = await client.query(
-                'SELECT crop_types, location FROM farm WHERE farmerid = $1', 
+                'SELECT name as farm_name, location FROM farm WHERE farmerid = $1', 
                 [userId]
             );
     
@@ -120,6 +142,8 @@ client.connect()
             res.status(500).json({ error: 'Error updating farm details' });
         }
     });
+
+    
     
     
     router.delete('/:id', async (req, res) => {

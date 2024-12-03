@@ -54,14 +54,24 @@ router.post('/', async(req, res) => {
     }
 })*/
 router.post('/', async (req, res) => {
-    const { name, email, phone, govId, address, size, crops, userlogin, userpassword } = req.body;
+    const { name, email, phone, govId, farmname, size, address, equipment, seeds, crops, userlogin, userpassword } = req.body;
 
-    // Validate required fields (exclude userid)
-    if (!name  || !email || !phone || !govId || !address || !size || !crops || !userlogin || !userpassword) {
+    // Validate required fields
+    if (!name || !email || !phone ||  !govId || !address || !size || !crops || !userlogin || !userpassword || !farmname || !equipment || !seeds) {
         return res.status(400).send('Missing required fields');
     }
 
     try {
+        // Check if userlogin already exists
+        const userCheck = await client.query('SELECT * FROM users WHERE userlogin = $1', [userlogin]);
+        // Before returning a 409 status
+        if (userCheck.rowCount > 0) {
+            console.error('Conflict: User login already exists:', userlogin);
+            return res.status(409).send('User login already exists');
+        }
+
+
+        // Proceed with insertion if userlogin does not exist
         const result = await client.query(
             'INSERT INTO users (userlogin, password, usertype) VALUES ($1, $2, $3) RETURNING *',
             [userlogin, userpassword, 'farmer']
@@ -71,9 +81,10 @@ router.post('/', async (req, res) => {
             [email, name, phone, govId, 'pending', 'active', userlogin]
         );
         const res2 = await client.query(
-            'INSERT INTO farm (farmerid, location, crop_types) VAlUES ((SELECT farmerid FROM farmer WHERE userlogin = $1), $2, $3)',
-            [userlogin, address, crops]
+            'INSERT INTO farm (farmerid, name, farm_size, location, crop_types, equipment, seeds) VALUES ((SELECT farmerid FROM farmer WHERE userlogin = $1 LIMIT 1), $4, $7, $2, $3, $5, $6)',
+            [userlogin, address, crops, farmname, equipment, seeds, size]
         );
+
         res.status(201).json(result.rows[0]); // Includes the generated userid
     } catch (err) {
         console.error('Database error:', err.stack);
@@ -101,7 +112,7 @@ router.put('/:id', async(req, res) => {
     const id = req.params.id;
     const {name, email, phone, govId, address, size, crops,userlogin,userpassword} = req.body;
 
-    try {
+try {
         const result = await client.query('UPDATE pending SET name = $1, email = $2, phone = $3, govId = $4, address = $5, size = $6, crops = $7, userlogin = $8, userpassword = $9 WHERE userid = $10', [name, email, phone, govId, address, size, crops,userlogin,userpassword, id]);
         if (result.rowCount == 0) {
             res.status(404).send('User not found!');

@@ -29,7 +29,6 @@ router.get('/locations', async (req, res) => {
     try {
         const result = await client.query('SELECT farmid, location FROM farm WHERE farmid IS NOT NULL AND location IS NOT NULL');
         console.log(result.rows);
-        res.json(result.rows);
     } catch (err) {
         console.log(err);
         res.send('Error');

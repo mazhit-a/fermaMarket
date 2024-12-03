@@ -5,7 +5,7 @@ struct HomePageView: View {
     @State private var categories: [String] = []
     @State private var errorMessage: String?
     @EnvironmentObject var cartManager: CartManager
-
+    
     var body: some View {
         NavigationView {
             ScrollView {
@@ -64,7 +64,6 @@ struct HomePageView: View {
     }
 
     private func fetchRandomProducts() {
-        print("d")
         guard let url = URL(string: "http://localhost:3000/api/v1/products/random-products") else {
             errorMessage = "Invalid product URL"
             return
@@ -138,7 +137,7 @@ struct ProductCard: View {
 
             Text(product.name)
                 .font(.headline)
-            Text("$\(product.price/product.quantity) / pc.")
+            Text("₸\(product.price) / pc.")
                 .font(.subheadline)
             Text("\(product.quantity) in stock")
                 .font(.subheadline)
@@ -178,6 +177,7 @@ struct Product: Codable {
     let organic_certification: String
     let price: Int
     let image_url: String
+    let farm_name: String
 }
 
 struct Category: Codable {

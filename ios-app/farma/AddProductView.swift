@@ -15,7 +15,8 @@ struct AddProductView: View {
     @State private var alertMessage = ""
     @State private var navigateToMainFarmerTab = false
     @State private var isImagePickerPresented = false
-    let farmid = "1233"
+    @AppStorage("farmID") private var farmID: String = ""
+
 
     var body: some View {
         NavigationStack {
@@ -85,7 +86,7 @@ struct AddProductView: View {
         let boundary = "Boundary"
 
         let textFields: [String: String] = [
-            "farmer_id": farmid,
+            "farmer_id": farmID,
             "name": name,
             "quantity": quantity,
             "description": description,
@@ -141,3 +142,4 @@ struct AddProductView: View {
         }.resume()
     }
 }
+

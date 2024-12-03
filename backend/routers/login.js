@@ -10,82 +10,91 @@ const client = new Client({
     password: 'Alibek2003%',
     database: 'farm-data',
   });
-
+  
 client.connect()
     .then(() => console.log('Connected to PostgreSQL'))
     .catch(err => console.error('Connection error', err.stack));
 
+router.post('/', async (req, res) => {
+    const { login, password } = req.body;
 
-    router.post('/', async (req, res) => {
-        const { login, password } = req.body;
-    
-        try {
-            const result = await client.query(
-                'SELECT * FROM users WHERE userlogin = $1 AND password = $2',
-                [login, password]
-            );
-    
-            if (result.rows.length > 0) {
-                const user = result.rows[0];
-                if (user.usertype == 'buyer') {
-                    const res1 = await client.query(
-                        'SELECT activity FROM buyer WHERE userlogin = $1', [login]
-                    );
-                    if (res1.rows[0].activity == 'active') {
-                        console.log(res1.rows[0]);
-                        console.log(user.usertype);
-                        res.json({
-                            success: true,
-                            user_type: user.usertype
-                        });
-                    }
-                    else {
-                        res.json({
-                            success: false,
-                            user_type: 'Account is disabled'
-                        });
-                    }
-                }
-                else if (user.usertype == 'farmer') {
-                    const res2 = await client.query(
-                        'SELECT status, activity FROM farmer WHERE userlogin = $1', [login]
-                    );
-                    if (res2.rows[0].activity == 'active') {
-                        if (res2.rows[0].status == 'approved') {
+    try {
+        // Query the users table to determine the user type
+        const userResult = await client.query(
+            'SELECT usertype FROM users WHERE userlogin = $1',
+            [login]
+        );
+
+        if (userResult.rows.length > 0) {
+            const userType = userResult.rows[0].usertype;
+
+            if (userType === 'farmer') {
+                // Query the farmer table
+                const farmerResult = await client.query(
+                    'SELECT * FROM farmer WHERE userlogin = $1',
+                    [login]
+                );
+
+                if (farmerResult.rows.length > 0) {
+                    const farmer = farmerResult.rows[0];
+
+                    if (farmer.activity === 'active') {
+                        if (farmer.status === 'approved') {
                             res.json({
                                 success: true,
-                                user_type: user.usertype
+                                user_type: 'farmer',
+                                user_id: farmer.farmerid,
                             });
-                        }
-                        else if (res2.rows[0].status == 'pending') {
-                            res.json({
-                                success: false, 
-                                user_type: 'Registration is pending'
-                            })
-                        }
-                        else {
+                        } else if (farmer.status === 'pending') {
                             res.json({
                                 success: false,
-                                user_type: 'Registration is rejected'
-                            })
+                                user_type: 'Registration is pending',
+                            });
+                        } else {
+                            res.json({
+                                success: false,
+                                user_type: 'Registration is rejected',
+                            });
                         }
-                    }
-                    else {
+                    } else {
                         res.json({
                             success: false,
-                            user_type: 'Account is disabled'
+                            user_type: 'Account is disabled',
                         });
                     }
+                } else {
+                    res.status(401).json({ success: false, user_type: 'Invalid login or password' });
+                }
+            } else if (userType === 'buyer') {
+                // Query the buyer table
+                const buyerResult = await client.query(
+                    'SELECT * FROM buyer WHERE userlogin = $1',
+                    [login]
+                );
+
+                if (buyerResult.rows.length > 0) {
+                    const buyer = buyerResult.rows[0];
+                    res.json({
+                        success: true,
+                        user_type: 'buyer',
+                        user_id: buyer.buyerid,
+                    });
+                } else {
+                    res.status(401).json({ success: false, user_type: 'Invalid login or password' });
                 }
             } else {
-                res.status(401).json({ success: false, user_type: 'Invalid login or password' });
+                res.json({
+                    success: false,
+                    user_type: 'Unknown user type',
+                });
             }
-        } catch (err) {
-            console.log(err);
-            res.status(500).send('Error');
+        } else {
+            res.status(401).json({ success: false, user_type: 'Invalid login or password' });
         }
-    });
-    
-    
+    } catch (err) {
+        console.error('Database query error:', err);
+        res.status(500).send('Internal server error');
+    }
+});
 
 module.exports = router;

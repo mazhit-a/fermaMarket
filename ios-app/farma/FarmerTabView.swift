@@ -2,7 +2,8 @@ import SwiftUI
 
 struct MainFarmerTabView: View {
     @State private var products: [FarmProduct] = []
-
+    @AppStorage("farmID") private var farmID: String = ""
+    
     var body: some View {
         TabView {
             InventoryView()
@@ -15,10 +16,22 @@ struct MainFarmerTabView: View {
                     Label("Add Product", systemImage: "plus.circle")
                 }
             
+            OrdersFarmView()
+                .tabItem {
+                    Label("Orders", systemImage: "shippingbox")
+                }
+            
             ProfileManagementView()
                 .tabItem {
                     Label("Account", systemImage: "person")
                 }
+            
+            OfferManagementView()
+                .tabItem {
+                    Label("Offers", systemImage: "checkmark.message.fill")
+                }
+            
+            
         }
         .accentColor(.green)
         .onAppear {

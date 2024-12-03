@@ -2,8 +2,10 @@ import SwiftUI
 
 struct InventoryView: View {
     @State private var allProducts: [FarmProduct] = []
+    @State private var lowStockProducts: [FarmProduct] = []
     @State private var errorMessage: String?
-    let farmid = "3948"
+    @State private var showLowStockAlert = false
+    @AppStorage("farmID") private var farmID: String = ""
 
     var body: some View {
         NavigationView {
@@ -15,11 +17,11 @@ struct InventoryView: View {
                     .padding(.top, 16)
 
                 if let error = errorMessage {
-                   Text(error)
+                    Text(error)
                         .foregroundColor(.red)
                         .padding()
                 } else if allProducts.isEmpty {
-                    Text("No products yet...")
+                    Text("Loading products...")
                         .padding(.horizontal)
                 } else {
                     ScrollView {
@@ -32,26 +34,41 @@ struct InventoryView: View {
                                 }
                                 .frame(height: 200)
                                 .padding()
-                                .background(RoundedRectangle(cornerRadius: 12).fill(Color.green.opacity(0.3)))
+                                .background(RoundedRectangle(cornerRadius: 12)
+                                                .fill(product.quantity < 5 ? Color.red.opacity(0.3) : Color.green.opacity(0.3)))
                                 .shadow(radius: 5)
                             }
                         }
                         .padding(.horizontal)
                     }
-                 }
+                }
             }
             .navigationTitle("Welcome, farmer!")
             .onAppear {
                 fetchAllProducts()
             }
+            .alert(isPresented: $showLowStockAlert) {
+                Alert(
+                    title: Text("Low Stock Alert"),
+                    message: Text("You have products with low stock. Please restock them."),
+                    dismissButton: .default(Text("OK"))
+                )
+            }
         }
     }
 
     private func fetchAllProducts() {
-        guard let url = URL(string: "http://localhost:3000/api/v1/products?farmer_id=\(farmid)") else {
+        guard !farmID.isEmpty else {
+            errorMessage = "Farm ID is missing. Please log in again."
+            return
+        }
+
+        guard let url = URL(string: "http://localhost:3000/api/v1/products/fari?farmer_id=\(farmID)") else {
             errorMessage = "Invalid products URL"
             return
         }
+
+        print("Fetching products for Farm ID: \(farmID)")
 
         URLSession.shared.dataTask(with: url) { data, response, error in
             if let error = error {
@@ -66,6 +83,8 @@ struct InventoryView: View {
                     let products = try JSONDecoder().decode([FarmProduct].self, from: data)
                     DispatchQueue.main.async {
                         self.allProducts = products
+                        self.lowStockProducts = products.filter { $0.quantity < 5 }
+                        self.showLowStockAlert = !self.lowStockProducts.isEmpty
                     }
                 } catch {
                     DispatchQueue.main.async {
@@ -120,4 +139,3 @@ struct InventoryView: View {
         }.resume()
     }
 }
-

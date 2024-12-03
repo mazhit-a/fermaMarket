@@ -2,7 +2,8 @@ import SwiftUI
 
 struct CartView: View {
     @EnvironmentObject var cartManager: CartManager
-    @State private var showOrderConfirmation = false // State to handle order confirmation
+    @State private var showOrderPlacementView = false // State to handle navigation to OrderPlacementView
+    @State private var stockError: String? // State to display stock error messages
 
     var body: some View {
         VStack {
@@ -36,7 +37,7 @@ struct CartView: View {
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Spacer()
                             Text("Qty: \(item.quantity)")
-                            Text("$\(item.product.price / item.product.quantity * item.quantity)")
+                            Text("₸\(item.product.price * item.quantity)")
                         }
                     }
                 }
@@ -47,14 +48,16 @@ struct CartView: View {
                     Text("Total:")
                         .font(.headline)
                     Spacer()
-                    Text("$\(cartManager.totalPrice())")
+                    Text("₸\(cartManager.totalPrice())")
                         .font(.headline)
                 }
                 .padding()
 
                 // Place Order Button
                 Button(action: {
-                    placeOrder()
+                    if checkStockAvailability() {
+                        showOrderPlacementView = true // Trigger navigation if stock is sufficient
+                    }
                 }) {
                     Text("Place Order")
                         .font(.headline)
@@ -65,22 +68,36 @@ struct CartView: View {
                         .cornerRadius(10)
                 }
                 .padding()
-                .alert(isPresented: $showOrderConfirmation) {
-                    Alert(
-                        title: Text("Order Placed"),
-                        message: Text("Thank you for your order!"),
-                        dismissButton: .default(Text("OK"), action: {
-                            cartManager.clearCart() // Clear the cart after placing the order
-                        })
-                    )
+                .disabled(cartManager.items.isEmpty) // Disable button if the cart is empty
+
+                // Display stock error if any
+                if let error = stockError {
+                    Text(error)
+                        .foregroundColor(.red)
+                        .padding()
+                }
+
+                // NavigationLink to OrderPlacementView
+                NavigationLink(
+                    destination: OrderPlacementView().environmentObject(cartManager),
+                    isActive: $showOrderPlacementView
+                ) {
+                    EmptyView()
                 }
             }
         }
         .navigationTitle("Cart")
     }
 
-    private func placeOrder() {
-        // Simulate order placement logic
-        showOrderConfirmation = true
+    /// Function to check stock availability for all items in the cart
+    private func checkStockAvailability() -> Bool {
+        for item in cartManager.items {
+            if item.quantity > item.product.quantity {
+                stockError = "The selected quantity for \(item.product.name) exceeds the available stock (\(item.product.quantity) available)."
+                return false
+            }
+        }
+        stockError = nil // Clear any previous errors
+        return true
     }
 }

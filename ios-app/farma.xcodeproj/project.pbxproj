@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA94F3092CFE62A400DCFF7F /* OrdersFarmView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94F3082CFE62A300DCFF7F /* OrdersFarmView.swift */; };
+		FA94F30B2CFE62C400DCFF7F /* OrderFarmDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94F30A2CFE62C400DCFF7F /* OrderFarmDetailview.swift */; };
+		FA94F30D2CFE62E800DCFF7F /* OrderRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94F30C2CFE62E800DCFF7F /* OrderRowView.swift */; };
+		FA94F30F2CFE630100DCFF7F /* OrderFarmitem.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94F30E2CFE630100DCFF7F /* OrderFarmitem.swift */; };
+		FA94F3112CFE632900DCFF7F /* OrderFarmItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA94F3102CFE632900DCFF7F /* OrderFarmItemView.swift */; };
 		FA9ED0502CF4B597003D13C2 /* BuyerRegistrationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED04F2CF4B597003D13C2 /* BuyerRegistrationView.swift */; };
 		FA9ED0522CF4E689003D13C2 /* FarmerTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0512CF4E689003D13C2 /* FarmerTabView.swift */; };
 		FA9ED0542CF4E701003D13C2 /* AddProductView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0532CF4E701003D13C2 /* AddProductView.swift */; };
@@ -15,6 +20,22 @@
 		FA9ED05A2CF4F0F1003D13C2 /* InventoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */; };
 		FA9ED05C2CF4F13D003D13C2 /* ProductFarmerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */; };
 		FA9ED05E2CF4F180003D13C2 /* ProductFarmerDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */; };
+		FA9ED0602CFB6A78003D13C2 /* OrderPlacementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED05F2CFB6A77003D13C2 /* OrderPlacementView.swift */; };
+		FA9ED0682CFB9097003D13C2 /* OrderConfirmationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0672CFB9097003D13C2 /* OrderConfirmationView.swift */; };
+		FA9ED06A2CFBB7CA003D13C2 /* OrderAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0692CFBB7CA003D13C2 /* OrderAPI.swift */; };
+		FA9ED06C2CFC716A003D13C2 /* OrdersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED06B2CFC716A003D13C2 /* OrdersView.swift */; };
+		FA9ED06E2CFC80B1003D13C2 /* OrderDetailview.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED06D2CFC80B1003D13C2 /* OrderDetailview.swift */; };
+		FA9ED0762CFD392C003D13C2 /* OfferRequestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0752CFD392C003D13C2 /* OfferRequestView.swift */; };
+		FA9ED0782CFD3957003D13C2 /* OfferAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0772CFD3957003D13C2 /* OfferAPI.swift */; };
+		FA9ED07E2CFDAEC4003D13C2 /* OfferManagementView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED07D2CFDAEC4003D13C2 /* OfferManagementView.swift */; };
+		FA9ED0802CFE0111003D13C2 /* Chatmessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED07F2CFE0111003D13C2 /* Chatmessage.swift */; };
+		FA9ED0822CFE020B003D13C2 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0812CFE020B003D13C2 /* ChatView.swift */; };
+		FA9ED0842CFE0239003D13C2 /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0832CFE0239003D13C2 /* ChatViewModel.swift */; };
+		FA9ED0862CFE0910003D13C2 /* MessageBubble.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0852CFE0910003D13C2 /* MessageBubble.swift */; };
+		FA9ED0882CFE3E2A003D13C2 /* SalesReportView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0872CFE3E2A003D13C2 /* SalesReportView.swift */; };
+		FA9ED08A2CFE3E5B003D13C2 /* SalesReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED0892CFE3E5B003D13C2 /* SalesReportViewModel.swift */; };
+		FA9ED08C2CFE3E76003D13C2 /* SalesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED08B2CFE3E76003D13C2 /* SalesData.swift */; };
+		FA9ED08E2CFE3F77003D13C2 /* HelperViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9ED08D2CFE3F77003D13C2 /* HelperViews.swift */; };
 		FAC332A82CEDD3340025E24E /* farmaApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332A72CEDD3340025E24E /* farmaApp.swift */; };
 		FAC332AA2CEDD3340025E24E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAC332A92CEDD3340025E24E /* ContentView.swift */; };
 		FAC332AC2CEDD33F0025E24E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FAC332AB2CEDD33F0025E24E /* Assets.xcassets */; };
@@ -54,6 +75,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA94F3082CFE62A300DCFF7F /* OrdersFarmView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersFarmView.swift; sourceTree = "<group>"; };
+		FA94F30A2CFE62C400DCFF7F /* OrderFarmDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFarmDetailview.swift; sourceTree = "<group>"; };
+		FA94F30C2CFE62E800DCFF7F /* OrderRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRowView.swift; sourceTree = "<group>"; };
+		FA94F30E2CFE630100DCFF7F /* OrderFarmitem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFarmitem.swift; sourceTree = "<group>"; };
+		FA94F3102CFE632900DCFF7F /* OrderFarmItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFarmItemView.swift; sourceTree = "<group>"; };
 		FA9ED04F2CF4B597003D13C2 /* BuyerRegistrationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BuyerRegistrationView.swift; sourceTree = "<group>"; };
 		FA9ED0512CF4E689003D13C2 /* FarmerTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FarmerTabView.swift; sourceTree = "<group>"; };
 		FA9ED0532CF4E701003D13C2 /* AddProductView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddProductView.swift; sourceTree = "<group>"; };
@@ -62,6 +88,22 @@
 		FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryView.swift; sourceTree = "<group>"; };
 		FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFarmerView.swift; sourceTree = "<group>"; };
 		FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductFarmerDetailView.swift; sourceTree = "<group>"; };
+		FA9ED05F2CFB6A77003D13C2 /* OrderPlacementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPlacementView.swift; sourceTree = "<group>"; };
+		FA9ED0672CFB9097003D13C2 /* OrderConfirmationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderConfirmationView.swift; sourceTree = "<group>"; };
+		FA9ED0692CFBB7CA003D13C2 /* OrderAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderAPI.swift; sourceTree = "<group>"; };
+		FA9ED06B2CFC716A003D13C2 /* OrdersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrdersView.swift; sourceTree = "<group>"; };
+		FA9ED06D2CFC80B1003D13C2 /* OrderDetailview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetailview.swift; sourceTree = "<group>"; };
+		FA9ED0752CFD392C003D13C2 /* OfferRequestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRequestView.swift; sourceTree = "<group>"; };
+		FA9ED0772CFD3957003D13C2 /* OfferAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferAPI.swift; sourceTree = "<group>"; };
+		FA9ED07D2CFDAEC4003D13C2 /* OfferManagementView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferManagementView.swift; sourceTree = "<group>"; };
+		FA9ED07F2CFE0111003D13C2 /* Chatmessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chatmessage.swift; sourceTree = "<group>"; };
+		FA9ED0812CFE020B003D13C2 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		FA9ED0832CFE0239003D13C2 /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
+		FA9ED0852CFE0910003D13C2 /* MessageBubble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageBubble.swift; sourceTree = "<group>"; };
+		FA9ED0872CFE3E2A003D13C2 /* SalesReportView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesReportView.swift; sourceTree = "<group>"; };
+		FA9ED0892CFE3E5B003D13C2 /* SalesReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesReportViewModel.swift; sourceTree = "<group>"; };
+		FA9ED08B2CFE3E76003D13C2 /* SalesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SalesData.swift; sourceTree = "<group>"; };
+		FA9ED08D2CFE3F77003D13C2 /* HelperViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelperViews.swift; sourceTree = "<group>"; };
 		FAC332A42CEDD3340025E24E /* farma.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = farma.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FAC332A72CEDD3340025E24E /* farmaApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = farmaApp.swift; sourceTree = "<group>"; };
 		FAC332A92CEDD3340025E24E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -138,12 +180,11 @@
 				FAC332A92CEDD3340025E24E /* ContentView.swift */,
 				FAC332AB2CEDD33F0025E24E /* Assets.xcassets */,
 				FAC332AD2CEDD33F0025E24E /* Preview Content */,
-				FAC332D12CEDD4B30025E24E /* BuyerHomeView.swift */,
 				FAC332D52CEE1C1A0025E24E /* CategoryProductsView.swift */,
+				FAC332D12CEDD4B30025E24E /* BuyerHomeView.swift */,
 				FAC332D72CEE2F8C0025E24E /* ProductDetailView.swift */,
 				FAC332D92CEE31300025E24E /* ProductSearchView.swift */,
 				FAC332DB2CEE3C170025E24E /* MainTabView.swift */,
-				FAC332EB2CEE71340025E24E /* CartItem.swift */,
 				FAC332ED2CEE737F0025E24E /* CartView.swift */,
 				FAFC9FED2CF0C9F3007613D3 /* RegisterView.swift */,
 				FAFC9FEF2CF0CA9E007613D3 /* SplashScreenView.swift */,
@@ -158,6 +199,28 @@
 				FA9ED0592CF4F0F1003D13C2 /* InventoryView.swift */,
 				FA9ED05B2CF4F13D003D13C2 /* ProductFarmerView.swift */,
 				FA9ED05D2CF4F180003D13C2 /* ProductFarmerDetailView.swift */,
+				FAC332EB2CEE71340025E24E /* CartItem.swift */,
+				FA9ED05F2CFB6A77003D13C2 /* OrderPlacementView.swift */,
+				FA9ED0672CFB9097003D13C2 /* OrderConfirmationView.swift */,
+				FA9ED0692CFBB7CA003D13C2 /* OrderAPI.swift */,
+				FA9ED06B2CFC716A003D13C2 /* OrdersView.swift */,
+				FA9ED06D2CFC80B1003D13C2 /* OrderDetailview.swift */,
+				FA9ED0752CFD392C003D13C2 /* OfferRequestView.swift */,
+				FA9ED0772CFD3957003D13C2 /* OfferAPI.swift */,
+				FA9ED07D2CFDAEC4003D13C2 /* OfferManagementView.swift */,
+				FA9ED07F2CFE0111003D13C2 /* Chatmessage.swift */,
+				FA9ED0812CFE020B003D13C2 /* ChatView.swift */,
+				FA9ED0832CFE0239003D13C2 /* ChatViewModel.swift */,
+				FA9ED0852CFE0910003D13C2 /* MessageBubble.swift */,
+				FA9ED0872CFE3E2A003D13C2 /* SalesReportView.swift */,
+				FA9ED0892CFE3E5B003D13C2 /* SalesReportViewModel.swift */,
+				FA9ED08B2CFE3E76003D13C2 /* SalesData.swift */,
+				FA9ED08D2CFE3F77003D13C2 /* HelperViews.swift */,
+				FA94F3082CFE62A300DCFF7F /* OrdersFarmView.swift */,
+				FA94F30A2CFE62C400DCFF7F /* OrderFarmDetailview.swift */,
+				FA94F30C2CFE62E800DCFF7F /* OrderRowView.swift */,
+				FA94F30E2CFE630100DCFF7F /* OrderFarmitem.swift */,
+				FA94F3102CFE632900DCFF7F /* OrderFarmItemView.swift */,
 			);
 			path = farma;
 			sourceTree = "<group>";
@@ -321,23 +384,44 @@
 				FAFC9FEE2CF0C9F3007613D3 /* RegisterView.swift in Sources */,
 				FAC332D22CEDD4B30025E24E /* BuyerHomeView.swift in Sources */,
 				FA9ED0562CF4E73D003D13C2 /* ImagePicker.swift in Sources */,
+				FA94F30B2CFE62C400DCFF7F /* OrderFarmDetailview.swift in Sources */,
+				FA9ED0822CFE020B003D13C2 /* ChatView.swift in Sources */,
 				FA9ED0542CF4E701003D13C2 /* AddProductView.swift in Sources */,
+				FA9ED0842CFE0239003D13C2 /* ChatViewModel.swift in Sources */,
 				FAC332D82CEE2F8C0025E24E /* ProductDetailView.swift in Sources */,
 				FA9ED0582CF4EDA7003D13C2 /* ProfileManagementView.swift in Sources */,
+				FA9ED08A2CFE3E5B003D13C2 /* SalesReportViewModel.swift in Sources */,
+				FA9ED0682CFB9097003D13C2 /* OrderConfirmationView.swift in Sources */,
 				FAFC9FF02CF0CA9E007613D3 /* SplashScreenView.swift in Sources */,
+				FA9ED06E2CFC80B1003D13C2 /* OrderDetailview.swift in Sources */,
 				FA9ED05E2CF4F180003D13C2 /* ProductFarmerDetailView.swift in Sources */,
+				FA9ED0762CFD392C003D13C2 /* OfferRequestView.swift in Sources */,
 				FA9ED05C2CF4F13D003D13C2 /* ProductFarmerView.swift in Sources */,
+				FA94F30F2CFE630100DCFF7F /* OrderFarmitem.swift in Sources */,
+				FA9ED0782CFD3957003D13C2 /* OfferAPI.swift in Sources */,
+				FA9ED08C2CFE3E76003D13C2 /* SalesData.swift in Sources */,
+				FA94F3112CFE632900DCFF7F /* OrderFarmItemView.swift in Sources */,
+				FA9ED0862CFE0910003D13C2 /* MessageBubble.swift in Sources */,
+				FA9ED06A2CFBB7CA003D13C2 /* OrderAPI.swift in Sources */,
 				FAC332EC2CEE71340025E24E /* CartItem.swift in Sources */,
+				FA9ED0802CFE0111003D13C2 /* Chatmessage.swift in Sources */,
 				FAC332AA2CEDD3340025E24E /* ContentView.swift in Sources */,
 				FAC332D62CEE1C1A0025E24E /* CategoryProductsView.swift in Sources */,
 				FA9ED05A2CF4F0F1003D13C2 /* InventoryView.swift in Sources */,
 				FAC332DC2CEE3C170025E24E /* MainTabView.swift in Sources */,
 				FAFC9FF22CF23388007613D3 /* ButtonStyle.swift in Sources */,
 				FA9ED0502CF4B597003D13C2 /* BuyerRegistrationView.swift in Sources */,
+				FA9ED0602CFB6A78003D13C2 /* OrderPlacementView.swift in Sources */,
+				FA9ED08E2CFE3F77003D13C2 /* HelperViews.swift in Sources */,
 				FAFC9FF62CF246F3007613D3 /* FarmerRegistrationView.swift in Sources */,
+				FA9ED06C2CFC716A003D13C2 /* OrdersView.swift in Sources */,
+				FA94F30D2CFE62E800DCFF7F /* OrderRowView.swift in Sources */,
 				FAFC9FF42CF24096007613D3 /* LoginView.swift in Sources */,
+				FA9ED0882CFE3E2A003D13C2 /* SalesReportView.swift in Sources */,
 				FA9ED0522CF4E689003D13C2 /* FarmerTabView.swift in Sources */,
 				FAC332DA2CEE31300025E24E /* ProductSearchView.swift in Sources */,
+				FA94F3092CFE62A400DCFF7F /* OrdersFarmView.swift in Sources */,
+				FA9ED07E2CFDAEC4003D13C2 /* OfferManagementView.swift in Sources */,
 				FAC332A82CEDD3340025E24E /* farmaApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
